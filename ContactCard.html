@@ -18,7 +18,9 @@
           var descript = $('#description').val();
           $('#right').append("<div class='card'><div class='front'><h2>"+first+ " " +last+"</h2><p>Click for Description!</p></div><div class='back'><p>"+descript+"</p></div></div>");
         })
-        $(document).on('click','.card',function(){
+        $(document).on('mouseenter','.card',function(){
+          $(this).children().toggle();
+        }).on('mouseleave','.card',function(){
           $(this).children().toggle();
         })
 
@@ -49,6 +51,6 @@
           <p>Something...</p>
         </div>
       </div>
-    </div>    
+    </div>
   </body>
 </html>
